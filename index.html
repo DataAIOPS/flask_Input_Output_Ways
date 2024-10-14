@@ -1,0 +1,96 @@
+<!-- Enhanced nav bar -->
+<style>
+  p {
+    background-image: url('templates/img_girl.jpg');
+  }
+
+  .navbar {
+    background-color: #ffe6ea;
+  }
+
+  .navbar-brand h1 {
+    font-family: Arial, sans-serif;
+    color: blue;
+    font-weight: bold;
+  }
+
+  .container-fluid.masthead {
+    background-color: #f2f2f2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .form-control {
+    margin-bottom: 15px;
+  }
+
+  .btn-primary {
+    background-color: #0056b3;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #004494;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+  <a class="navbar-brand" href="/"><h1>Calculator By Pramod Patil</h1></a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com">Source Code</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.linkedin.com/">Pramod Patil</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid masthead">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form method="POST">
+          <div class="form-group">
+            <label for="First_Number"><h3>Enter the First Number:</h3></label>
+            <input type="text" class="form-control" name="First_Number" placeholder="First Number" required>
+
+            <label for="Second_Number"><h3>Enter the Second Number:</h3></label>
+            <input type="text" class="form-control" name="Second_Number" placeholder="Second Number" required>
+
+            <label for="operation"><h3>Choose Operation:</h3></label>
+            <select class="form-control" name="operation">
+              <option value="SUM">SUM</option>
+              <option value="SUB">SUB</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary mb-2">Calculate</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="translation-result"><h3>Calculation Result:</h3></label>
+          <textarea readonly class="form-control" id="result" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
